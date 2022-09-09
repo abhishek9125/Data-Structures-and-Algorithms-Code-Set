@@ -1,0 +1,37 @@
+Heap - Complete Binary except last level filled from left side.
+
+Heap Order Property - Max Heap / Min Heap
+
+Max Heap - Child Value is less than Parent
+
+Min Heap - Child Value is more than Parent
+
+Array 0th Index - NULL
+
+60 50 40 30 20
+
+Node -> ith Index
+Left Child -> 2*i Index
+Right Child -> 2/i + 1 Index
+Parent -> i/2 Index
+Leaf Nodes of CBT -> n/2 + 1 - n index 
+
+for 0 based indexing
+left = 2*i + 1
+right = 2*i + 2
+
+Heap Insertion - Insert Element in the end and check value compared to parent and if max heap and parent < current swap them until index = parent.
+
+Heap Deletion - Swap : Root Node with Last Node then Remove last Node then rebase dwapped node with parents until parent > node is satisfied.
+
+Heapify - 54 53 55 52 50 -> Convert into Heap.
+
+Step 1 -> Create a Complete Binary Tree.
+Step 2 -> Check for every node from Right if it is a Heap from itself;
+Step 3 -> Lead Nodes are already Heap (n/2+1 -> n)
+Step 4 -> Process Nodes from 1 to n/2 for correct position
+
+Heap STL - Priority Queue
+
+Default - Max Heap : priority_queue<int> pq; pq.push(), pq.top(), pq.size(), pq.pop() pq.empty()
+Default - Min Heap : priority_queue<int, vector<int>, greater<int>> pq; pq.push(), pq.top(), pq.size(), pq.pop() pq.empty()
