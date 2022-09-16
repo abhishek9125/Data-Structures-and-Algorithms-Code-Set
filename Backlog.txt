@@ -6,3 +6,11 @@ Binary Trees
 
 Bit Manipulation
 Fast Exponentiation
+
+Stacks
+Largest Area Rectangle
+N Stacks using Array
+Design Special GetMin Stack
+
+Queues
+N Queus using Array
