@@ -100,8 +100,32 @@ void insertAtPosition(Node*& head, int position, int data) {
 
 void deleteNode(Node*& head, int position) {
 
-    
+    Node* temp = head;
 
+    if(position == 1) {
+        head = head->next;
+        temp->next = NULL;
+        head->prev = NULL;
+        delete temp;
+        return;
+    }
+
+    int count = 1;
+
+    while(count < position) {
+        temp = temp->next;
+        count++;
+    }
+
+    Node* current = temp;
+    current = current->next;
+
+    current->next->prev = temp;
+    temp->next = current->next;
+
+    current->next = NULL;
+    current->prev = NULL;
+    delete current;
     return;
 }
 
