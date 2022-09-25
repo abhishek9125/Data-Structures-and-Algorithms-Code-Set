@@ -48,7 +48,7 @@ class Graph {
 
                 if(distance[top] != INT_MAX) {
                     for(auto i: adjList[top]) {
-                        if(distance[top] + i.second < distance[i.first]) {
+                        if(distance[top] + i.second < distance[i.first]){
                             distance[i.first] = distance[top] + i.second;
                         }
                     }
